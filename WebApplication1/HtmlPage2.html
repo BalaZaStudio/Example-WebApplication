@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+<body>
+
+    <form name="forumlario1">
+        <select name="lista1">
+
+            <option value="Primer">Primero</option>
+            <option value="Segun">Segundo</option>
+            <option value="Tercer">Tercero</option>
+            <option value="Cuarto">Cuarto</option>
+        </select>
+        <br />
+        <input type="button" onclick="mostrar()" value="Mostrar" /><br />
+        <input type="button" value="Nuevo" onclick="crearNuevo()"/><br />
+        <input type="button" value="Borrar" onclick="borrarUno(4)" /><br />
+        <br />
+    </form>
+</body>
+</html>
+<script>
+    function mostrar() {
+        var indice_seleccionado = document.formulario1.lista1.selectedIndex;
+        if (indice_seleccionado >= 0) {
+            var seleccion = document.formulario1.lista1.options[indice_seleccionado].value;
+            alert(seleccion);
+        }
+    }
+    function crearNuevo() {
+        var next.index = document.forumlario1.lista1.lenght;
+        document.formulario1.lista1.options[next_index] = new Option("Cinco");
+    }
+    function borrarUno(indice) {
+        document.formulario1.lista1.options[indice] = null;
+
+    }
+
+
+</script>

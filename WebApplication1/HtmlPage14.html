@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.0.js"></script>
+</head>
+<body>
+    <form name="formulario1" id="formulario1">
+        Color Favortio:<input type="checkbox" name="colorfavorito" value="rojo" id="rojo" /><br />
+        <input type="button" id="boton" value="Ver color Favorito"/>
+    </form>
+
+</body>
+</html>
+<script>
+    $(function(){
+        $("#boton").click(function () {
+            let color = $('input:checkbox[name=colorfavorito]:checked').val();
+            color == undefined ? alert('No seleccionado') : alert(`Tu color favorito es ${color}`);
+        });
+    })
+ 
+</script>

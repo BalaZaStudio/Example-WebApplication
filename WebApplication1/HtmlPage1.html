@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> </title>
+
+
+    <script>
+
+        var imagenes = new Array();
+
+        imagenes[0] = "imagenes/uno.jpg";
+        imagenes[1] = "imagenes/dos.jpg";
+        imagenes[2] = "imagenes/tres.jpg";
+        imagenes[3] = "imagenes/cuatro.jpg";
+        imagenes[4] = "imagenes/cinco.jpg";
+        imagenes[5] = "imagenes/seis.jpg";
+        imagenes[6] = "imagenes/siete.jpg";
+
+        var indice_imagenes = 0;
+
+        function Ir_Siguiente() {
+            //incrementar el indice del array
+            indice_imagenes++;
+            //Se ha llegado a la ultima
+            if (indice_imagenes == imagenes.length) {
+                indice_imagenes = 0;
+            }
+            //Mostrar la imagen
+            document.images["carpeta_imagenes"].src = imagenes[indice_imagenes];
+        }
+
+        function Ir_Anterior() {
+            indice_imagenes--;
+            if (indice_imagenes < 0) {
+                indice_imagenes = imagenes.length - 1;
+
+            }
+            document.images["carpeta_imagenes"].src = imagenes[indice_imagenes];
+        }
+
+
+    </script>
+</head>
+<body>
+    <center>
+
+        <img src="imagenes/uno.jpg" name="carpeta_imagenes" width="200" height="200" /><br />
+
+        <input type="button" value="Siguiente_Imagen" onclick="Ir_Siguiente()" />
+        <input type="button" value="Anterior_Imagen" onclick="Ir_Anterior()" />
+
+    </center>
+        
+
+</body>
+</html>

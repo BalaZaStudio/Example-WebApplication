@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Libro de visitas</title>
+    <script>
+    function mostrarDatos() {
+      var nombre = document.getElementById("nombre").value;
+      var email = document.getElementById("email").value;
+      var comentarios = document.getElementById("comentarios").value;
+
+      var mensaje = "Nombre: " + nombre + "\n";
+      mensaje += "Email: " + email + "\n";
+      mensaje += "Comentarios: " + comentarios;
+
+      alert(mensaje);
+    }
+    </script>
+</head>
+<body>
+    <h1>Libro de visitas</h1>
+
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <br>
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" rows="4" cols="50"></textarea>
+
+        <br>
+
+        <button type="button" onclick="mostrarDatos()">Enviar</button>
+    </form>
+</body>
+</html>

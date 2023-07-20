@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.0.js"></script>
+</head>
+<body>
+    <form>
+        Nombre:<input type="text" name="nombre" /><br />
+        <input type="checkbox" name="mayor:_edad" id="mayoria_edad" /> Soy Mayor de edad<br />
+                <div id="formulariomayores" style="display:none">
+            Dato para mayores de edad : <input type="text" name="mayores_edad" />
+        </div>
+    </form>
+</body>
+</html>
+<script>
+    $(function () {
+        $("#mayoria_edad").click(function () {
+            if ($("#mayoria_edad").is(":checked")) {
+                $("#formulariomayores").css('display', 'block');
+            } else {
+                $("#formulariomayores").css('display', 'none');
+            }
+        });
+    })
+
+</script>

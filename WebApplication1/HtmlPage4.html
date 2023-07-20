@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <form name="formulario1">
+        Seleccione los deportes que practica:<br />
+        <input type="checkbox" name="checkbox1" />Futbol<br />
+        <input type="checkbox" name="checkbox2" />Basquet<br />
+        <input type="checkbox" name="checkbox3" />Tenis<br />
+        <input type="button" value="Ver Deportes" onclick="verificar()"/><br />
+
+
+
+    </form>
+
+
+    
+</body>
+</html>
+<script>
+
+    function verificar() {
+        var deportes = '';
+        if (formulario1.checkbox1.checked) {
+            deportes += 'Futbol ';
+        }
+        if (formulario1.checkbox2.checked) {
+            deportes += 'Basquet ';
+        }
+        if (formulario1.checkbox3.checked) {
+            deportes += 'Tenis ';
+        }
+        alert(`Los deportes selccionados son ${deportes}`)
+    }
+
+</script>

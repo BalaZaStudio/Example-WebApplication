@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.0.js"></script>
+</head>
+<body>
+
+    <form name="formulario1">
+        <select name="color1">
+            <option value="0">Selecccione una opcion</option>
+            <option value="azul">Azul</option>
+            <option value="rojo">Rojo</option>
+        </select>
+        <input type="color" id="color" name="valor1" size="40" value="#80bec9" />
+
+    </form>
+
+</body>
+</html>
+
+<script>
+    $(function () {
+
+        $("select[name=color1]").change(function () {
+            if ($('select[name=color1]').val() == "azul") {
+                $('input[name=valor1').val("#1f1cd7");
+            }
+            else {
+                $('input[name=valor1').val("#c42f0c");
+            }
+        })
+
+    })
+
+
+</script>

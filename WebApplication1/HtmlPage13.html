@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.0.js"></script>
+</head>
+<body>
+    <div id="micapa" style="background-color:#cc7700;
+      color:#fff; padding:10px;
+      width: 300 px; height:130px;
+      position: absolute; top:10px; left:500 px;">
+    
+        <ul>
+            <li>Voy a probar el callback</li>
+            <li>para ejecutar funciones unas despues de otras</li>
+            <li>Que me sirve de ejemplo para probar efectos</li>
+        </ul>
+    </div>
+    <br /><br />
+
+    <a href="#" id="pilallamadas">Hacer varias llamadas a callback</a>
+
+</body>
+</html>
+<script>
+
+    $(function () {
+        $("#pilallamadas").click(function () {
+            $("#micapa").fadeOut(2000, function () {
+                $("#micapa").css({ 'top': 300, 'left': 200 });
+                $("#micapa").fadeIn(2000, function () {
+                    $("#micapa").css({ 'top': 10, 'left': 10 });
+                })
+            })
+        })
+
+    })
+
+</script>

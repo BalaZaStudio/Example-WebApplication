@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form name="formulario1">
+        <label>Es mayor de edad?:</label>
+        <input type="radio" name="edad" value="si" />SI
+        <input type="radio" name="edad" value="no" />NO
+        <br />
+        <input type="button" value="verificar" onclick="verificar()" />
+    </form>
+
+</body>
+</html>
+
+<script>
+
+    function verificar (radio_group) {
+
+        for (cont = 0; cont<radio_group.leght; cont++) {
+            if (radio_group[cont].checked) {
+                acceso_a_pagina(cont);
+            }
+        }
+        
+    }
+    function acceso_a_pagina(indice) {
+        if (indice == 0) {
+            alert('Permiso de acceso concedido');
+        }
+        else {
+            alert('Acceso denegado');
+        }
+    }
+     
+
+</script>

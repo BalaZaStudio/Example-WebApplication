@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.0.js"></script>
+</head>
+<body>
+
+    <div id="capaefectos" style="background-color:#cc7700; color:cornsilk; padding:10px;">
+        Esto es una capa que nos sirve para hacer efectos<br /><br />
+        Pongo este texto para tener mas opciones
+
+
+    </div>
+    <p>
+
+        <a href="#" id="ocultar">Ocultar la capa</a>
+        <a href="#" id="mostrar">Mostrar la capa</a>
+
+    </p>
+
+</body>
+</html>
+
+<script>
+    $(function () {
+        $("#ocultar").click(function () {
+            $("#capaefectos").hide("slow");
+        });
+        $("#mostrar").click(function () {
+            $("#capaefectos").show(3000);
+        });
+    })
+
+    // callback de funciones : apilar funciones para que se ejecuten unas detras de otras
+    // servir para hacer casi todas las funcionalidades de jQuery
+</script>
